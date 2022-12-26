@@ -33,15 +33,29 @@
   <section id="intro" class="wrapper style1 fullscreen fade-up">
     <div class="inner">
       <h1>⚡Dispərət Techno</h1>
-	    
-	
-
-	    
-    <!-- Adicione a classe "center" e uma margem superior ao elemento div que envolve os vídeos -->
-    <div class="center" style="margin-top: 20px;">
-      <video src="https://www.youtube.com/embed/UCxSq2I4Ets" width="640" height="360"></video>
-    </div>
+<div class="center">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/UCxSq2I4Ets" frameborder="0" allowfullscreen></iframe>
   </div>
+</div>
+	    .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    
 </section>
 
 					<!-- One -->
