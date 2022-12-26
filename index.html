@@ -34,36 +34,25 @@
     <div class="inner">
       <h1>⚡Dispərət Techno</h1>
 	
-	    
-	    
-	    // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+	<div class="chat-container">
+  <div class="dialog-body">
+    <!-- As mensagens serão adicionadas aqui -->
+  </div>
+  <div class="input-container">
+    <input type="text" class="input-field" placeholder="Digite sua mensagem aqui">
+    <button class="send-button">Enviar</button>
+  </div>
+</div>
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyB4I-wf72bwOlSOmKOZdt4k27oSmqr6qdo",
-  authDomain: "disparat-16a75.firebaseapp.com",
-  projectId: "disparat-16a75",
-  storageBucket: "disparat-16a75.appspot.com",
-  messagingSenderId: "797753723162",
-  appId: "1:797753723162:web:e5df526a440f5c4c0184a3",
-  measurementId: "G-3NRL1JWM8J"
-};
+// Inicialize o cliente do Assistant
+const assistant = new Assistant({
+  version: '2021-04-01',
+  key: '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'
+});
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+// Função para enviar uma mensagem para o Assistant e exibir a resposta
+async function sendMessage(message) {
+  // Envie a mensagem para    
 	    
 	    
 	    
