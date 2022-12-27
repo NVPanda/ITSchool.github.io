@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minha página de busca</title>
+  </head>
+  <body>
+    <!-- Adicione a tag script aqui -->
+    <script>
+      // Instale o Puppeteer como dependência do seu projeto
+      const puppeteer = require('puppeteer');
+
+      // Defina a URL do site com os títulos de filmes
+      const url = 'https://redecanais.la/mapafilmes.html';
+
+      // Defina a função que realizará a busca
+      async function search(query) {
+        // Inicialize o navegador e a página do Puppeteer
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+
+        // Acesse a página com os títulos de filmes
+        await page.goto(url);
+
+        // Execute o código JavaScript na página para obter todos os títulos de filmes
+        const titles = await page.evaluate(() => {
+          // Use uma função de seleção do DOM para obter todos os elementos com o título de um filme
+          const titleElements = document.querySelectorAll('.title');
+
+          // Retorne os títulos como uma array de strings
+          return Array.from(titleElements).map(element => element.textContent);
+        });
+
+        // Feche o navegador
+        await browser.close();
+
+        // Retorne os títulos encontrados
+        return titles;
+      }
+    </script>
+  </body>
+</html>
