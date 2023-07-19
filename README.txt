@@ -1,1 +1,1 @@
-Computer Learning School, que busca promover acesso a cultura e estimular a transformação humana por meio da capacitação
+We are a virtual school that aims to improve our students and ensure their entry into the local and global job market through individual means.
